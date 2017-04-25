@@ -156,8 +156,38 @@ print("Can do Dot product with arrays and T")
 dotprod = np.dot(new_fancy.T,new_fancy.T)
 print(dotprod)
 
+""" Transpose is just special case of swap.axes"""
+swap_dot = dotprod.swapaxes(0,1)
+print("swap axes")
+print(swap_dot)
 
+""" Universal array functions perform fast elementwise functions"""
+""" can be unitary ( 1 array) or binary (2 arrays) ect"""
 
+x = np.random.randn(10,5)
+y = np.random.randn(10,5)
+
+print("Array X: ")
+print(x)
+
+print("Array Y: ")
+print(y)
+
+print(" square root of x is..")
+sqrtx = np.sqrt(x)
+print(sqrtx)
+
+print(" exp of x is..")
+expx = np.exp(x)
+print(expx)
+
+print(" x + y is ...")
+add = np.add(x,y)
+print(add)
+
+print("Can sort out maximum at each i,j position...")
+maxi = np.maximum(x,y)
+print(maxi)
 
 
 
